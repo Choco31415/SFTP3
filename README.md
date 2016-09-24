@@ -24,7 +24,6 @@ When writing your own SFTP code, you will need to put everything in the followin
 ```
 s = SFTP_client(IP, username, password=password, key_filename=key_filename)
 s.open_sftp_channel(max_packet_size=2048)
-s.init()
 
 <FTP code here>
 
@@ -34,7 +33,9 @@ s.close()
 With comments:
 
 ```
-# Create the SFTP_client object with these parameters. Password or key_filename is required, but not both. This only sets up a standard SSH connection.
+# Create the SFTP_client object with these parameters.
+# Password or key_filename is required, but not both.
+# This only sets up a standard SSH connection.
 s = SFTP_client(IP, username, password=password, key_filename=key_filename)
 # Connect to sftp subsystem and negotiate sftp versions.
 s.open_sftp_channel(max_packet_size=2048)
