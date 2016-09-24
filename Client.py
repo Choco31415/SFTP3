@@ -19,12 +19,11 @@ weird_directory = "~/../sftp/test/../rock"
 # Start an SFTP connection
 s = SFTP_client(IP, username=username, password=password, key_filename=key_filename)
 print("ls: " + s.pipe_command("ls")) # Unnecessary, but nice for checking the network connection.
-s.open_sftp_channel(max_packet_size=2048)
 
 # Test our SFTP project
 print("\nInitialization\n")
 
-s.init()
+s.open_sftp_channel(max_packet_size=2048)
 
 print("\nDirectories\n")
 

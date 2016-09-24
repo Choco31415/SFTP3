@@ -1,5 +1,5 @@
 # Handle imports
-import paramiko
+import paramiko.paramiko as paramiko
 
 # Create classes
 class SSH():
@@ -8,6 +8,16 @@ class SSH():
     """
 
     def __init__(self, IP, username, password = None, key_filename = None):
+        """
+        Either password or key_filename is required.
+
+        :param IP: The IP of the remote machine.
+        :param username: The username of a user on the remote machine.
+        :param password: The password of a user on a remote machine.
+        :param key_filename: The key_filename on a remote machine.
+        """
+        assert not ((password is None) and (key_filename is None))
+
         self.IP = IP
 
         self.max_packet_size = 1024

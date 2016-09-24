@@ -33,6 +33,8 @@ class SFTP_client(SSH):
 
         self.socket = chan
 
+        self.__initiate()
+
     def __send(self, msg):
         """
         Send bytes to server.
@@ -80,9 +82,10 @@ class SFTP_client(SSH):
 
         return msg
 
-    def init(self):
+    def __initiate(self):
         """
-        Initiate the SFTP connection. This is required before any SFTP requests are sent.
+        Initiate the SFTP connection. This negotiates sftp versions between client and server.
+        This is required to be run before any SFTP requests are sent.
 
         :return: None
         """
