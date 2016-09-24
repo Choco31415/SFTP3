@@ -39,7 +39,7 @@ STATUS_BITS = {
 # Define classes
 class attributes():
     """
-    attributes is a wrapper class as defined by the SFTP internet draft 02. It describes the attributes of a file.
+    attributes is a compound data class for encoding file attributes. It is defined by the SFTP internet draft 02.
 
     Use attributes.bytes() to get the byte encoding, and attributes.decode(bytes) to decode from bytes.
 
