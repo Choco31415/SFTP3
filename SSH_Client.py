@@ -16,7 +16,7 @@ class SSH():
         :param password: The password of a user on a remote machine.
         :param key_filename: The key_filename on a remote machine.
         """
-        assert not ((password is None) and (key_filename is None))
+        assert not ((password is None) and (key_filename is None)), "Please provide a password or key_filename."
 
         self.IP = IP
 

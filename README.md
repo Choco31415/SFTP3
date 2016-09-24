@@ -46,9 +46,9 @@ s.open_sftp_channel(max_packet_size=2048)
 s.close()
 ```
 
-All FTP methods may be found in FTP_client in FTP_Client.py.
+All SFTP methods may be found in SFTP_client in SFTP_Client.py.
 
-Also, please note that any method calls that the server reports as invalid will cause exceptions in the Python code. As such, it is good practice to wrap the FTP code in a try-except statement.
+Also, please note that any method calls that the server reports as invalid will cause exceptions in the Python code. As such, it is good practice to wrap the SFTP code in a try-except statement.
 
 # Project Tree
 Attributes
